@@ -33,19 +33,17 @@ public class ChallengeWeek1 {
                     If the algorithm finds a modulo in the range from 2-myNum !equal to 0
                     then that is a prime number and the loop is stopped. conf = Prime
                     */
-                    if(myNum%2 == 0){
-                        conf = "Not";
 
-                    }else{
-                        for(int test = 3; test < myNum; test++){
+                        for(int test = 2; test < myNum; test++){
                             if(myNum%test == 0){
                                 conf = "Not";
+                                System.out.println(myNum + " is divisible by: " + test);
                                 break;
                             }else{
                                 conf = "Prime";
                             }
                         }
-                    }
+
 
                     //Output is dispayed based on if conf equals "Prime" or "Not"
                     if(conf.equals("Prime")){
@@ -83,11 +81,7 @@ public class ChallengeWeek1 {
                     If the algorithm finds a modulo in the range from 2-myNum !equal to 0
                     then that is a prime number and the loop is stopped. conf = Prime
                     */
-                    if(myNum%2 == 0){
-                        conf = "Not";
-
-                    }else{
-                        for(int test = 3; test < myNum; test++){
+                        for(int test = 2; test < myNum; test++){
                             if(myNum%test == 0){
                                 conf = "Not";
                                 break;
@@ -95,7 +89,6 @@ public class ChallengeWeek1 {
                                 conf = "Prime";
                             }
                         }
-                    }
                     //Output is dispayed based on if conf equals "Prime" or "Not"
                     if(conf.equals("Prime")){
                         System.out.println(myNum + " is a Prime Number!");
