@@ -15,7 +15,7 @@ public class ChallengeWeek1 {
         //A do while loop runs this program until the option "quit" is typed
         do{
             //Initialization of program
-            System.out.println("Would you like to generate a random number? If not you will be prompted to enter your own number (yes/no). \nTo quit the program type \"quit\".");
+            System.out.println("Would you like to generate a random number? If not, then you will be prompted to enter your own number (yes/no). \nTo quit the program type \"quit\".");
             option = scanner.next();
 
             //Option 1: User Entered Number
@@ -30,22 +30,21 @@ public class ChallengeWeek1 {
                     If the algorithm finds a modulo in the range from 2-myNum equal to 0
                     then that is not a prime number and the loop is stopped. conf = Not
 
-                    If the algorithm finds a modulo in the range from 2-myNum !equal to 0
-                    then that is a prime number and the loop is stopped. conf = Prime
+                    If the algorithm only finds modulos in the range from 2-myNum !equal to 0
+                    then that is a prime number. conf = Prime
                     */
-
-                        for(int test = 2; test < myNum; test++){
-                            if(myNum%test == 0){
-                                conf = "Not";
-                                System.out.println(myNum + " is divisible by: " + test);
-                                break;
-                            }else{
-                                conf = "Prime";
-                            }
+                    for(int test = 2; test < myNum; test++){
+                        if(myNum%test == 0){
+                            System.out.println(myNum + " is divisible by: " + test);
+                            conf = "Not";
+                            break;
                         }
+                        else{
+                            conf = "Prime";
+                        }
+                    }
 
-
-                    //Output is dispayed based on if conf equals "Prime" or "Not"
+                    //Output is displayed based on if conf equals "Prime" or "Not"
                     if(conf.equals("Prime")){
                         System.out.println(myNum + " is a Prime Number!");
                     }else{
@@ -78,11 +77,12 @@ public class ChallengeWeek1 {
                     If the algorithm finds a modulo in the range from 2-myNum equal to 0
                     then that is not a prime number and the loop is stopped. conf = Not
 
-                    If the algorithm finds a modulo in the range from 2-myNum !equal to 0
-                    then that is a prime number and the loop is stopped. conf = Prime
+                    If the algorithm only finds modulos in the range from 2-myNum !equal to 0
+                    then that is a prime number. conf = Prime
                     */
                         for(int test = 2; test < myNum; test++){
                             if(myNum%test == 0){
+                                System.out.println(myNum + " is divisible by: " + test);
                                 conf = "Not";
                                 break;
                             }else{
